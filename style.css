@@ -1,0 +1,324 @@
+
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  .container {
+      width: 100%;
+  }
+  .text-content {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    font-family: monospace;
+    animation: text 3s linear infinite;
+  }
+  @keyframes text {
+    0% {
+    color: red;
+    opacity: 0.5;
+    }
+    25% {
+      font-size: x-large;
+      color: yellow;
+      opacity: 1;
+    }
+    50% {
+      color: red;
+      opacity: 0.5;
+      font-size: xx-large;
+    }
+    75% {
+      color: blue;
+      opacity: 0.5;
+      font-size: x-large;
+    }
+    100% {
+      font-size: xx-large;
+    }
+  }
+
+  .flag {
+      width: 150px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 30px;
+      left: 100px;
+    }
+
+  .star {
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 58%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 58%,
+          0% 35%,
+          39% 35%
+      )
+  }
+  .flag {
+    z-index: 1;
+    background-color: red;
+    position: relative;
+    animation: wave 3s linear infinite;
+    opacity: 0.5;
+  }
+
+  .flag::before,
+  .flag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: yellow;
+    transform: skewY(45deg);
+  }
+
+  .flag::before {
+    transform: rotate(45deg);
+  }
+
+  .flag::after {
+    transform: rotate(-45deg);
+  }
+    
+  @keyframes wave {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-20px) skewY(10deg);
+    }
+    50% {
+      transform: translateX(0px) skewY(0deg);
+    }
+    75% {
+      transform: translateX(20px) skewY(-10deg);
+    }
+    100% {
+      transform: translateX(0px) skewY(0deg);
+    }
+  }
+  .img-hung {
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5px;
+    left: 160px;
+    opacity: 0.55;
+    height: max-content;
+  }
+  .img-map-viet {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+  .img-nguoi-linh {
+    width: 350px;
+    position: absolute;
+    top: calc(30% + 80px);
+    left: calc(35% + 10px);
+  }
+  .img-car {
+    width: 170px;
+    position: absolute;
+    left: calc(45% + 10px);
+    top: calc(40% + 100px);
+    opacity: 0.7;
+  }
+  .img-man {
+    width: 150px;
+    position: absolute;
+    left: calc(35% + 25px);
+    top: calc(40% + 130px);
+    opacity: 0.9;
+    
+  }
+  .runner {
+    width: 50px;
+    height: 100px;
+    background-color: #007bff;
+    position: relative;
+    background: linear-gradient(to bottom, #87CEEB 20%, #5F9EA0 80%);
+    animation: waveAnimation 2s infinite ease-in-out;
+  }
+
+  @keyframes waveAnimation {
+    0% {
+      transform: skewY(5deg);
+    }
+    50% {
+      transform: skewY(-5deg);
+    }
+    100% {
+      transform: skewY(5deg);
+    }
+  }
+  #lyrics {
+    font-family: monospace;
+    font-size: large;
+    letter-spacing: 0.3;
+    font-weight: 700;
+    animation: blink 1s linear infinite;
+    height: max-content;
+    z-index: 1;
+  }
+  .bi-star-fill {
+    color: yellow;
+    position: absolute;
+    top: calc(15% + 15px);
+    left: calc(40% + 40px);
+    opacity: 1;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+  }
+  @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+  #lyrics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .text-content {
+    text-align: center;
+    font-size: smaller;
+    font-weight: 800;
+    font-family: monospace;
+    animation: text 2s linear infinite;
+  }
+  @keyframes text {
+    0% {
+     color: red;
+     opacity: 0.5;
+    }
+    25% {
+      font-size: small;
+      color: yellow;
+      opacity: 1;
+    }
+    50% {
+      color: red;
+      opacity: 0.5;
+      font-size: small;
+    }
+    75% {
+      color: blue;
+      opacity: 0.5;
+      font-size: x-small;
+     }
+     100% {
+       font-size: small;
+     }
+  }
+  .flag{
+    width: 42px;
+    height: 40px;
+    position: absolute;
+    top: calc(20% + 40px);
+    opacity: 0.6;
+    left: calc(10%);
+  }
+  .star{
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .svg {
+    position: absolute !important;
+    top: calc(25% + 27px);
+    left: calc(10% + 49px);
+  }
+  .img-hung {
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 25%;
+  }
+  .img-map-viet {
+    width: 200px;
+    height: 200px;
+    left: 60%;
+    position: absolute;
+    top: calc(40% + 25px);
+  }
+  .img-nguoi-linh {
+    width: 100px;
+    position: absolute;
+    top: calc(40% + 35px);
+    left: 37%;
+  }
+  .img-car {
+    width: 40px;
+    position: absolute;
+    opacity: 1;
+    left: 50%;
+    top: calc(40% + 65px);
+  }
+  .img-man {
+    width: 40px;
+    opacity: 1;
+    position: absolute;
+    top: calc(40% + 65px);
+    left: calc(30% + 27px);
+  }
+  #currentLyric {
+    text-align: center;
+
+  }
+  #lyrics {
+    font-size: 14px;
+    font-weight: 700;
+    animation: blink 1s linear infinite;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .bi-star-fill {
+    color: yellow;
+    position: absolute;
+    top: calc(30% + 7px);
+    left: calc(25% + 42px);
+    opacity: 1;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+  }
+}
